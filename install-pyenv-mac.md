@@ -57,6 +57,33 @@ pyenv install 3.7.0
 ### Show which versions of python are installed
 ```bash
 pyenv versions
+  system
+* 3.5.9 (set by /Users/USERNAME/.pyenv/version)
+  3.6.0
+```
+Currently I have two python versions, which is listing and I'm using 3.5.9 is the global version of python in my machine
+
+### Change the Pyenv Version Project Based
+```bash
+mkdir python-project
+cd python-project
+pyenv local 3.6.0
+```
+Inside the `python-project` directory having python version of 3.6.0, the but the global version of python is 3.5.9 which has asterisk
+```bash
+pyenv global 3.6.0 # Setting the python 3.6.0 is the global version
 ```
 
-
+### Locate Python in Mac
+```bash 
+which -a python
+```
+#### Output
+/Users/USERNAME/.pyenv/shims/python
+/usr/bin/python
+```bash
+which -a python3
+```
+#### Output
+/usr/local/opt/python@3.8/bin/python3
+/Users/USERNAME/.pyenv/shims/python3
