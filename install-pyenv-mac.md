@@ -98,3 +98,37 @@ System Application folder
 - /Library/Frameworks/Python.framework
 - /usr/local/bin
 ```
+Delete all versions of python that installed via python.org installer, enter these commands in terminal:
+
+```bash
+sudo rm -rf '/Applications/Python A.B' #replace A.B with the version number on the folder
+sudo rm -rf /Library/Frameworks/Python.framework
+sudo rm -rf /usr/local/bin/python
+sudo rm -rf /usr/local/bin/python3
+```
+### Removing Python from Framework & Application Framework
+To remove particular versions of python, you have to refer to the particular framework. 
+The frameworks are installed in /Library/Frameworks/Python.framework and particular versions are found in /Library/Frameworks/Python.framework/Versions/A.B. 
+So for example if you wanted to uninstall only version 3.5 but leave other versions you would enter the following commands in bash:
+```bash
+sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.5
+sudo rm -rf '/Applications/Python 3.5'
+sudo rm -rf /usr/local/bin/python3
+```
+### Uninstalling using Homebrew
+```bash
+brew list | grep 'python'
+brew uninstall -f python python@2
+brew uninstall --ignore-dependencies python python@2
+brew uninstall -f python python@2 gdal geos libspatialite libxml2 numpy
+brew unlink python python@2 && brew link python python@2
+```
+### Uninstalling using pyenv
+```bash
+pyenv versions
+  system
+* 3.5.9 (set by /Users/USERNAME/.pyenv/version)
+  3.6.0
+pyenv uninstall 3.5.9
+pyenv uninstall 3.6.0
+```
