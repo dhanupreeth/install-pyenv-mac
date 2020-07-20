@@ -79,11 +79,22 @@ pyenv global 3.6.0 # Setting the python 3.6.0 is the global version
 which -a python
 ```
 #### Output
-/Users/USERNAME/.pyenv/shims/python
-/usr/bin/python
+```bash
+- /Users/USERNAME/.pyenv/shims/python
+- /usr/bin/python
+```
 ```bash
 which -a python3
 ```
 #### Output
-/usr/local/opt/python@3.8/bin/python3
-/Users/USERNAME/.pyenv/shims/python3
+```bash
+- /usr/local/opt/python@3.8/bin/python3
+- /Users/USERNAME/.pyenv/shims/python3
+```
+### Uninstalling Python
+System Application folder 
+```bash 
+- /Applications
+- /Library/Frameworks/Python.framework
+- /usr/local/bin
+```
